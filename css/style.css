@@ -63,9 +63,11 @@ canvas {
 @media screen and (max-width: 750px){
     canvas{
         width: 350px;
+        
     }
     body{
         height: 100vh;
+        
     }
     .main{
         height: 600px;
