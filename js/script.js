@@ -149,7 +149,30 @@ buttons.forEach(button => {
         }
     })
 })
+buttons.forEach(button => {
+    // Adiciona evento de clique
+    button.addEventListener("click", () => {
+        handleButtonClick(button);
+    });
+    
+    // Adiciona evento de toque
+    button.addEventListener("touchstart", (event) => {
+        event.preventDefault(); // Previne o comportamento padrão do toque
+        handleButtonClick(button);
+    });
+});
 
+function handleButtonClick(button) {
+    if (button.classList.contains("up")) {
+        direction = "up";
+    } else if (button.classList.contains("down")) {
+        direction = "down";
+    } else if (button.classList.contains("right")) {
+        direction = "right";
+    } else if (button.classList.contains("left")) {
+        direction = "left";
+    }
+}
 document.addEventListener("keydown", ({key}) => {
     if(key == "ArrowRight" && direction != "left"){
         direction = "right"
