@@ -134,7 +134,7 @@ const checkEat = () => {
     }
 }
 buttons.forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("touchstart", () => {
         if (button.classList.contains("up") && direction != "down"){
             direction = "up"
         }
@@ -149,18 +149,6 @@ buttons.forEach(button => {
         }
     })
 })
-buttons.forEach(button => {
-    // Adiciona evento de clique
-    button.addEventListener("click", () => {
-        handleButtonClick(button);
-    });
-    
-    // Adiciona evento de toque
-    button.addEventListener("touchstart", (event) => {
-        event.preventDefault(); // Previne o comportamento padrão do toque
-        handleButtonClick(button);
-    });
-});
 
 function handleButtonClick(button) {
     if (button.classList.contains("up")) {
