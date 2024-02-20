@@ -11,6 +11,7 @@ const finalScore = document.querySelector(".final-score > span")
 const menu = document.querySelector(".menu-sceen")
 const btn_play = document.querySelector(".btn-play")
 let direction, loopId 
+const buttons = document.querySelectorAll(".up ,.down, .left, .right")
 
 
 const gameover = () => {
@@ -132,6 +133,23 @@ const checkEat = () => {
         food.color = randomColor
     }
 }
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        if (button.classList.contains("up") && direction != "down"){
+            direction = "up"
+        }
+        if (button.classList.contains("down") && direction != "up"){
+            direction = "down"
+        }
+        if (button.classList.contains("right") && direction != "left"){
+            direction = "right"
+        }
+        if(button.classList.contains("left") && direction != "right"){
+            direction = "left"
+        }
+    })
+})
+
 document.addEventListener("keydown", ({key}) => {
     if(key == "ArrowRight" && direction != "left"){
         direction = "right"

@@ -46,6 +46,9 @@ canvas {
     font-weight: 500;
     font-size: 1.5rem;
 }
+.btn-phone{
+    display: none;
+}
 .btn-play {
     background-color: #fff;
     border: none;
@@ -64,6 +67,9 @@ canvas {
     canvas{
         width: 350px;
         
+    }
+    .btn-phone{
+        display: block;
     }
     body{
         height: 100vh;
