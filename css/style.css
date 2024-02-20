@@ -65,19 +65,19 @@ canvas {
 }
 @media screen and (max-width: 750px){
     canvas{
-        width: 350px;
+        width: 380px;
         
     }
     .btn-phone{
+        margin: 5px;
         display: block;
-    }
-    body{
-        height: 100vh;
-        
     }
     .main{
         height: 600px;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
         
     }
+    
     
 }
