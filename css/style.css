@@ -69,15 +69,32 @@ canvas {
         
     }
     .btn-phone{
-        margin: 5px;
-        display: block;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
     }
     .main{
-        height: 600px;
+        height: 500px;
         margin-bottom: 5px;
         padding-bottom: 5px;
         
     }
-    
-    
+    .up, .down, .left, .right{
+        
+        padding: 5px 10px;
+        border-radius: 50%;
+    }  
+    .left{
+        margin-right: 30px;
+        
+    }
+    .up, .down{
+        justify-content: center;
+        margin: auto;
+    }
+    .sides{
+        justify-content: center;
+        margin: auto;
+    }
+
 }
